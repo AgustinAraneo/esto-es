@@ -61,6 +61,7 @@ const config = {
         'gris-fondo': '#F0F2F5',
         'gris-label': '#262626',
         'gris-fecha': '#00000073',
+        'gris-inputs': '#595959',
       },
       borderRadius: {
         lg: 'var(--radius)',

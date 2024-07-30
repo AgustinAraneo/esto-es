@@ -59,7 +59,7 @@ export const AddProjectForm: React.FC = () => {
     };
 
     return (
-        <div className="px-4 mx-auto bg-white py-6 mt-4">
+        <div className="px-4 mx-auto bg-white py-6 mt-4 lg:w-[665px] lg:rounded-[4px] lg:shadow-xl">
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-[16px]">
                     <FormField
@@ -160,7 +160,7 @@ export const AddProjectForm: React.FC = () => {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" variant={'primary'} className='w-fit text-[16px] leading-6 '>Create project</Button>
+                    <Button type="submit" variant={'primary'} className='w-fit text-[16px] leading-6 mt-2'>Create project</Button>
                 </form>
             </Form>
         </div>

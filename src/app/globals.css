@@ -68,6 +68,7 @@
   }
 }
 
+/* //Triangulo popover */
 .custom-popover-content {
   position: relative;
 }
@@ -75,23 +76,44 @@
 .custom-popover-content::before {
   content: '';
   position: absolute;
-  top: -10px; /* Ajusta según sea necesario */
-  right: 13px; /* Ajusta según sea necesario */
+  top: -10px;
+  right: 13px;
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-bottom: 10px solid #d9d9d9; /* Color del borde del popover */
+  border-bottom: 10px solid #d9d9d9;
 }
 
 .custom-popover-content::after {
   content: '';
   position: absolute;
-  top: -8px; /* Ajusta según sea necesario */
-  right: 14px; /* Ajusta según sea necesario */
+  top: -8px;
+  right: 14px;
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 10px solid #ffffff; /* Color del fondo del popover */
+  border-bottom: 10px solid #ffffff;
+}
+
+/* //loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #9ca3af;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

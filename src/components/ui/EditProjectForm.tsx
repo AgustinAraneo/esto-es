@@ -45,7 +45,7 @@ export const EditProjectForm = () => {
             try {
                 projectSchema.parse(project);
                 const projects = JSON.parse(localStorage.getItem('projects') || '[]');
-                const updatedProjects = projects.map((p: Project) => p.projectName === project.projectName ? project : p);
+                const updatedProjects = projects.map((p: Project) => p.projectName === projectName ? project : p);
                 localStorage.setItem('projects', JSON.stringify(updatedProjects));
                 router.push('/');
             } catch (e) {
@@ -60,10 +60,14 @@ export const EditProjectForm = () => {
         }
     };
 
-    if (!project) return <div>Loading...</div>;
+    if (!project) return <div className='text-center mt-10 flex justify-center flex-col gap-4 w-full'>
+
+        <div className="loader w-full mx-auto"></div>
+        <p>Loading project...</p>
+    </div>;
 
     return (
-        <div className="px-4 mx-auto bg-white py-6 mt-4">
+        <div className="px-4 mx-auto bg-white py-6 mt-4 lg:w-[665px] lg:rounded-[4px] lg:shadow-xl">
             <form onSubmit={(e) => { e.preventDefault(); handleSave(); }} className="flex flex-col gap-[16px]">
                 <div className="form-item">
                     <label className="form-label">Project name</label>
@@ -152,7 +156,7 @@ export const EditProjectForm = () => {
                         {errors.status && <p className="text-red-500">{errors.status}</p>}
                     </div>
                 </div>
-                <Button type="submit" variant={'primary'} className='w-fit text-[16px] leading-6'>Save</Button>
+                <Button type="submit" variant={'primary'} className='w-fit text-[16px] leading-6 mt-2'>Save changes</Button>
             </form>
         </div>
     );
