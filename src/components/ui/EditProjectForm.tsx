@@ -7,7 +7,6 @@ import { z } from 'zod';
 import { Input, Button, Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from './shadcn';
 import { Project } from './ProjectsCards';
 
-// Define the schema with Zod
 const projectSchema = z.object({
     projectName: z.string().min(1, { message: "Project name is required" }),
     description: z.string().min(1, { message: "Description is required" }),

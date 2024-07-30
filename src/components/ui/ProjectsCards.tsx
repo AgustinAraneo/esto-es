@@ -53,7 +53,6 @@ export const ProjectsCards: React.FC<ProjectCardProps> = ({ project, onDelete })
 
     return (
         <div>
-            {/* Mobile View */}
             <div className="border-b-[1px] border-bordes px-4 py-2 bg-white w-full lg:hidden block">
                 <div className="flex justify-between items-center">
                     <div className="flex flex-col">
@@ -85,7 +84,6 @@ export const ProjectsCards: React.FC<ProjectCardProps> = ({ project, onDelete })
                 </Drawer>
             </div>
 
-            {/* Desktop View */}
             <div className="lg:block hidden  w-full px-[48px]">
                 <table className="min-w-full bg-white shadow-xl rounded-b-[4px]">
                     <tbody>

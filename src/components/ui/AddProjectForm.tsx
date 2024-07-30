@@ -55,7 +55,7 @@ export const AddProjectForm: React.FC = () => {
         const updatedProjects = [...existingProjects, projectWithDate];
         localStorage.setItem('projects', JSON.stringify(updatedProjects));
         form.reset();
-        router.push('/'); // Redirigir a la página principal
+        router.push('/');
     };
 
     return (
